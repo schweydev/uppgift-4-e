@@ -1,0 +1,76 @@
+/* Inledande tankar:
+
+Går först igenom html-koden i programmet Visual Studio Code. Läser av vilken Css-kod som redan är gjord. Använder bilden som referens och läser av uppgiften och dess anvisningar vi mottagit via arbetsboken Webbutveckling 1 och har utgått från redan deklarerad CSS*/
+
+/* Har lagt in en mörkgrå färg i bakgrunden */
+html {
+    background-color: lightslategrey;
+} 
+
+/* Har lagt in den ljusblå färgen som en bakgrund i body. Därefter ändrat texten från standard default till font-family: sans-serif som uppfyller referens-bilden*/
+body {
+    color: black; 
+    background-color: azure;
+    margin: auto;
+    width: 500px;
+    padding-bottom: 0.1px; /*knep för div margin */
+    font-family: sans-serif;
+}
+
+/* Huvudrubriken har förändrats till lila och centrerats */
+h1 {
+    color: purple; 
+    text-align: center;
+}
+
+/* Första divven har namngetts till billy och hänvisas här. Har lagt in en lila tunn ram med en margin och padding som håller referensens krav lika så dess rundade hörn. Texten i billy har ändrats till en mörkröd färg.*/
+#billy {
+    border: purple solid 1px; 
+    border-radius: 5px;
+    padding-top: 18px;
+    padding-left: 8px;
+    margin: 10px;
+    color: darkred;
+}
+
+/* I första divven i andra stycket har en större text än standard bifogats */
+.two {
+    font-size: larger;
+}
+
+/* I första divven i tredje stycket har här en midnre text än standard bifogats */
+.three {
+    font-size: smaller;
+}
+
+/* Här skulle enligt referens fjärde stycket vara fetstilt. Har då lagt in ett syskon + p till det andra syskonet .three som är kopplade till selektoren #billy */
+.three + p {
+    font-weight: bolder;
+}
+
+/* Ett marginaljusterat stycke krävdes enligt referens och har lagts in via selektor #bob och sen kopplat ihop syskon som är syskon ( p + p ) till en klass (.two) som är barn till id #bob */
+#bob > .two + p + p {
+    text-align: justify;
+}
+
+/* Andra divven har namngetts till bob och hänvisas här. Har lagt in en lila tunn ram med en margin och padding som håller referensens krav lika så dess rundade hörn. Texten i billy har ändrats till en mörkröd färg */
+#bob {
+    
+    border: purple solid 1px; 
+    border-radius: 5px;
+    padding-top: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 10px;
+    color: darkgreen;
+}
+
+/* Alla länkar i andra divven ska vara genomstrukna enligt referens och har begränsats till andra divven genom att använda en avkomlingsselektor */
+#bob a {
+    text-decoration: line-through;
+}
+
+/* För att få en över- och underlinje under en specifik länk i andra divven i andra stycket har jag använt ett barn till ett barn som hör till selektor #bob  */
+#bob > .two a {
+    text-decoration: overline underline double orange; 
+}
